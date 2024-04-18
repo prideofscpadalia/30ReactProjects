@@ -11,7 +11,7 @@ export default function TestimonialsApp() {
     //     console.log("button clicked");
     //     console.log(e.target);
     // }
-    const [testimonials,setTestimonials] = useState();
+    const [testimonials,setTestimonials] = useState("");
     const [items,setItems] =useState([]);
 
     useEffect(()=>{
@@ -24,16 +24,25 @@ export default function TestimonialsApp() {
     
     <div>
         <Title text={"TestimonialsApp"} />
+
         <Button onClick={()=>setTestimonials("posts")} text={"Posts"} btnClass="btn-info" icon={<MdPostAdd />}/> 
+
         <Button onClick={()=>setTestimonials("users")} text={"Users"} btnClass="btn-info" icon={<FaRegUser />}/> 
 
         <Button onClick={()=>setTestimonials("comments")} text={"Comments"} btnClass="btn-info" icon={<MdOutlineComment />}/> 
 
+        <Button text={"album"} btnClass={"btn-success"} onClick={()=>setTestimonials("albums")} icon={<MdOutlineComment />}/>
+
         <Title classes={"subtitle text-primary"} text={!testimonials ? "select from above" : testimonials} />
-        {!items || Array.isArray(items) ? null : items.map((item)=>{
+        {!items ? null : items.map((item)=>{
                 return (
-                  <div className="card card-primary mb-2">
-                    {item.title}
+                  <div className="card card-primary mb-2" key={item.id}>
+                    <div className="card-body">
+                      <h4>{item.title}{item.username}</h4>
+                      <p>{item.body}</p>
+                    </div>
+                    
+
                   </div> 
                 )            
         })}
