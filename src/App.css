@@ -1,19 +1,4 @@
-.body{
-  background-color: #ccc;
-}
 
-.title{
-  font-size: 3.3rem;
-  font-weight: 700;
-  font-style: normal;  
-  
-}
-.subtitle{
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 2rem 0;  
- 
-}
 .textarea{
   border: 4px solid pink;
   position: relative;
@@ -37,3 +22,4 @@
     transform: scale(0);
   }
 }
+
