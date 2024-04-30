@@ -8,6 +8,7 @@ export default function Alert({type,text,delay=false}) {
     setTimeout(()=>{
       setAlert(false)
     },400)
+    
   }
   useEffect(()=>{
     delay &&
