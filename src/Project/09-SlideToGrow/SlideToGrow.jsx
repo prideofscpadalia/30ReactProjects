@@ -17,7 +17,7 @@ export default function SlideToGrow() {
         bgColor = "red"
         textColor = "white"
     }
-
+ 
     if(slideValue >= 25 && slideValue <= 50){
         bgColor = "blue"
         textColor = "white"

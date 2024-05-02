@@ -1,4 +1,5 @@
 import "./App.css"
+import HiddenSearchBar from "./Project/10-HiddenSearchBar/HiddenSearchBar"
 // import Esignature from './Project/01-Esignature/Esignature'
 // import RandomColor from "./Project/02-EandomizeColor/RandomColor"
 // import DarkMode from './Project/07-DarkMode/DarkMode';
@@ -7,7 +8,7 @@ import "./App.css"
 // import Alert from './Project/Alert/Alert';
 // import LikePhotoApp from './Project/03-LikePhotoApp/LikePhotoApp';
 // import SlideToUnlock from "./Project/08-slide-to-unlock/SlideToUnlock"
-import SlideToGrow from "./Project/09-SlideToGrow/SlideToGrow"
+// import SlideToGrow from "./Project/09-SlideToGrow/SlideToGrow"
 
 
 
@@ -24,7 +25,8 @@ function App() {
   //  <Temperature />
   //  <DarkMode />
   //  <SlideToUnlock />
-  <SlideToGrow />
+  // <SlideToGrow />
+  <HiddenSearchBar />
   )
 }
 export default App
