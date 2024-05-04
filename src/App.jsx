@@ -1,5 +1,6 @@
 import "./App.css"
 import HiddenSearchBar from "./Project/10-HiddenSearchBar/HiddenSearchBar"
+import PopupApp from "./Project/11-MagicPopup/PopupApp"
 // import Esignature from './Project/01-Esignature/Esignature'
 // import RandomColor from "./Project/02-EandomizeColor/RandomColor"
 // import DarkMode from './Project/07-DarkMode/DarkMode';
@@ -26,7 +27,8 @@ function App() {
   //  <DarkMode />
   //  <SlideToUnlock />
   // <SlideToGrow />
-  <HiddenSearchBar />
+  // <HiddenSearchBar />
+  <PopupApp />
   )
 }
 export default App
