@@ -22,7 +22,7 @@ export default function Popup({type,title,text,handlePopup}) {
             <div className="alert-close flex justify-between">
                 <div className="flex flex-col">
                     <h4 className="text-left">{title && title}</h4>
-                    <p>{text && text}</p>
+                    <p className='text-left'>{text && text}</p>
                 </div>
                 <Button  text={"X"} onClick={()=>{
                     handlePopup(false)
