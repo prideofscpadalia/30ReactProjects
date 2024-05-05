@@ -1,5 +1,5 @@
 import "./App.css"
-import HiddenSearchBar from "./Project/10-HiddenSearchBar/HiddenSearchBar"
+// import HiddenSearchBar from "./Project/10-HiddenSearchBar/HiddenSearchBar"
 import PopupApp from "./Project/11-MagicPopup/PopupApp"
 // import Esignature from './Project/01-Esignature/Esignature'
 // import RandomColor from "./Project/02-EandomizeColor/RandomColor"
