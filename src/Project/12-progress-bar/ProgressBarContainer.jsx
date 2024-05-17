@@ -1,6 +1,29 @@
-import React ,{useEffect, useRef}from 'react'
+import React ,{useEffect, useRef, useState}from 'react'
 import Title from '../../Components/Title'
+import { ProgressBar } from '../../Components/ProgressBar';
+
 export default function ProgressBarContainer() {
+    const [completed,setCompleted] = useState(51);
+    const [status,setStatus] = useState({
+        ui:50,
+        ux:28,
+        data:78,
+    });
+
+    const projectData = [{
+            bgColor:"#7633f9",
+            completed:status.ui
+        },
+        {
+            bgColor:"#28a745",
+            completed:status.ux
+        },
+        {
+            bgColor:"#dc3545",
+            completed:status.data
+        },
+    ]
+
     const inputStyle={
         width:50,
         border:"none",
@@ -15,7 +38,8 @@ export default function ProgressBarContainer() {
     
     useEffect(() => {
       uiInput.current.focus();
-    })
+      setInterval(() => setCompleted(Math.floor(Math.random()*100 +1)),3000)
+    },[])
     
   return (
     
@@ -26,29 +50,42 @@ export default function ProgressBarContainer() {
         <ul>
             <li className='mb-3'>UI Status :
                 <input type="number" 
+                min={0}
+                max={100}
                 style={inputStyle} 
-                value={""} 
+                value={status.ui} 
                 ref={uiInput}
-                onChange={(e) => console.log(e.target.value)}
+                onChange={(e) => setStatus({...status,ui:e.target.value})}
                 />
             </li>
 
             <li className='mb-3'>UX Status :
                 <input type="number" 
+                min={0}
+                max={100}
                 style={inputStyle} 
-                value={""} 
-                onChange={(e) => console.log(e.target.value)}
+                value={status.ux} 
+                // ref={uiInput}
+                onChange={(e) => setStatus({...status,ux:e.target.value})}
                 />
             </li>
 
             <li className='mb-3'>DATA Status :
                 <input type="number" 
+                min={0}
+                max={100}
                 style={inputStyle} 
-                value={""} 
-                onChange={(e) => console.log(e.target.value)}
+                value={status.data} 
+                // ref={uiInput}
+                onChange={(e) => setStatus({...status,data:e.target.value})}
                 />
             </li>
         </ul>
+
+         {projectData.map((data,index) =>(
+            <ProgressBar bgColor={data.bgColor} completed={data.completed} key={index}/>
+         ))}
+        <ProgressBar bgColor={completed > 50 ?"#28a745" : "#dc3545"} completed={completed}/>
     </div>
   )
 }
