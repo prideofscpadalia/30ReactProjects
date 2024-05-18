@@ -1,5 +1,6 @@
 import "./App.css"
-import ProgressBarContainer from "./Project/12-progress-bar/ProgressBarContainer"
+import DialogBox from "./Project/13-Dialog-Box/DialogBox"
+// import ProgressBarContainer from "./Project/12-progress-bar/ProgressBarContainer"
 // import HiddenSearchBar from "./Project/10-HiddenSearchBar/HiddenSearchBar"
 // import PopupApp from "./Project/11-MagicPopup/PopupApp"
 // import Esignature from './Project/01-Esignature/Esignature'
@@ -30,7 +31,8 @@ function App() {
   // <SlideToGrow />
   // <HiddenSearchBar />
   // <PopupApp />
-  <ProgressBarContainer />
+  // <ProgressBarContainer />
+  <DialogBox />
   )
 }
 export default App
