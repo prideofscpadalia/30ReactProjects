@@ -1,5 +1,7 @@
 import React,{useEffect, useRef} from 'react'
 import Title from '../../Components/Title'
+import ContextData from './Data.json'
+
 export default function () {
     const inputSearch = useRef(null);
     useEffect(() => {
@@ -13,7 +15,13 @@ export default function () {
         className='mb-2'
         style={{padding: "0.3rem 0.5rem"}} 
         ref={inputSearch}/>
-        {/* <section className='flex' style={{gap: 15, maxWidth: 1600, margin: "auto"}}></section> */}
+        <section className='flex' style={{gap: 15, maxWidth: 1600, margin: "auto"}}>
+        {ContextData.map((contact) => (
+                <ul>
+                    <li>{contact.first_name}</li>
+                </ul>
+            ))}
+        </section>
     </div>
-  )
+  );
 }
