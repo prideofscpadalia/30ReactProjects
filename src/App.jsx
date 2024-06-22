@@ -1,5 +1,6 @@
 import "./App.css"
 import DialogBox from "./Project/13-Dialog-Box/DialogBox"
+import FilterContextApp from "./Project/14-FilterContactApp/FilterContextApp"
 // import ProgressBarContainer from "./Project/12-progress-bar/ProgressBarContainer"
 // import HiddenSearchBar from "./Project/10-HiddenSearchBar/HiddenSearchBar"
 // import PopupApp from "./Project/11-MagicPopup/PopupApp"
@@ -32,7 +33,8 @@ function App() {
   // <HiddenSearchBar />
   // <PopupApp />
   // <ProgressBarContainer />
-  <DialogBox />
+  // <DialogBox />
+  <FilterContextApp/>
   )
 }
 export default App
