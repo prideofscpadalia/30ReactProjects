@@ -28,7 +28,7 @@ export default function Esignature() {
   document.body.style.background="#eee"
 
   return (
-    <div className="container text-center">
+    <div className=" text-center">
       <Title classes={"title mb-6"} text={name} />
       <Title classes={"subtitle mb-6"} text={date} />
       <p >{content}</p>

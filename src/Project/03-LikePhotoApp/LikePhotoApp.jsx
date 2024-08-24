@@ -5,6 +5,7 @@ import { LuSmile } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
 import { LiaComments } from "react-icons/lia";
 import { FcLike } from "react-icons/fc";
+import me from "../../assets/me.jpg"
 
 export default function LikePhotoApp() {
     // let like=false;
@@ -25,23 +26,22 @@ export default function LikePhotoApp() {
     <div className='container text-center'>
         <Title  text={"Like Photo App"}/>
         <Title classes={"subtitle"}  text={`Like ${count}`}/>
-        <div className="card bg-slate-900 m-auto text-white"
+        <div className="card bg-dark m-auto text-white"
         style={{width: 330, cursor: "pointer"}}
         >
             <div className="card-header fs-xl">
                 <LuSmile/>
-                <h2>Images</h2>
+                <h2 >Images</h2>
+                {/* <small>Images</small> */}
             </div>
-            <img src="https://w.forfun.com/fetch/b4/b4d430320229744245679e19e50b6f03.jpeg?h=900&r=0.5" alt="img" style={{height:"fit-content" , background:"olive"}} onDoubleClick={toggleLike}/>
+            <img src={me} alt="img" style={{height:"fit-content" , background:"olive"}} onDoubleClick={toggleLike}/>
             <div className="card-footer fs-xl flex p-3"  style={{justifyContent: 'space-between'}}>
             <LiaComments />
             {like ? (
             <FcLike onClick={toggleLike}/> 
             ): (
             <FaRegHeart onClick={toggleLike} />
-            )}
-            
-            
+            )}            
             </div>
         </div>
     </div>
