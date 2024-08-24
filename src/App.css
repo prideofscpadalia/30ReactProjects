@@ -1,6 +1,8 @@
+
 .title{
-  
-  font-weight: bolder;
+  font-size: 5rem;
+  font-weight: 600;
+  margin: 4rem 0;
 
 }
 .textarea{
@@ -10,6 +12,7 @@
   border-radius: 20px;
   background-color: #DAF5FF;
   padding: 7px;
+  outline: none;
 }
 .fadeAlert{
   /* background-color: blue; */
@@ -30,4 +33,13 @@ div{
   font-size: medium;
   font-weight: 500;
   
+}
+.subtitle{
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 4rem 0;
+
+}
+.container{
+
 }

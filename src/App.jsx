@@ -1,11 +1,11 @@
 import "./App.css"
-import DialogBox from "./Project/13-Dialog-Box/DialogBox"
-import FilterContextApp from "./Project/14-FilterContactApp/FilterContextApp"
-import Practice from "./Project/511-react_Practice_Interview/Practice"
+// import DialogBox from "./Project/13-Dialog-Box/DialogBox"
+// import FilterContextApp from "./Project/14-FilterContactApp/FilterContextApp"
+// import Practice from "./Project/511-react_Practice_Interview/Practice"
 // import ProgressBarContainer from "./Project/12-progress-bar/ProgressBarContainer"
 // import HiddenSearchBar from "./Project/10-HiddenSearchBar/HiddenSearchBar"
 // import PopupApp from "./Project/11-MagicPopup/PopupApp"
-// import Esignature from './Project/01-Esignature/Esignature'
+import Esignature from './Project/01-Esignature/Esignature'
 // import RandomColor from "./Project/02-EandomizeColor/RandomColor"
 // import DarkMode from './Project/07-DarkMode/DarkMode';
 // import Temperature from './Project/06-Temperature/Temperature';
@@ -19,7 +19,7 @@ import Practice from "./Project/511-react_Practice_Interview/Practice"
 
 function App() {
   return (
-  //  <Esignature /> 
+   <Esignature /> 
   //  <RandomColor />
   //  <TestimonialsApp />
   //  <LikePhotoApp />
@@ -36,7 +36,7 @@ function App() {
   // <ProgressBarContainer />
   // <DialogBox />
   // <FilterContextApp/>
-  <Practice />
+  // <Practice />
   )
 }
 export default App

@@ -24,6 +24,7 @@ export default function Esignature() {
     padding: "0.35 rem" ,
     
   }
+  //this is real dom element
   document.body.style.background="#eee"
 
   return (
@@ -34,7 +35,8 @@ export default function Esignature() {
 
 
       <textarea className='textarea' cols="60" rows="5" placeholder='write here ...' value={content} onChange={handleContent}></textarea>
-      <footer className='flex' style={{justifyContent:"space-around", position:'relative', top:"50vh"}}>
+      {/* i want to disable the above content box after the content is written on it*/}
+      <footer className='flex' style={{justifyContent:"space-around", position:'relative', top:"35vh"}}>
       <input type="date" style={inputStyle} value={date} onChange={handleDate}/>
       <input type="text" style={inputStyle} value={name} onChange={handleName}/>      
       </footer>
