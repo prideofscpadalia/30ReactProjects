@@ -1,51 +1,47 @@
-import { useState,useEffect } from 'react'
-import Title from '../../Components/Title'
-import Button from '../../Components/Button'
+import {useEffect, useState} from "react";
+import Title from "../../Components/Title";
+import Button from "../../Components/Button";
 import { MdPostAdd } from "react-icons/md";
-import { FaRegUser } from "react-icons/fa";
-import { MdOutlineComment } from "react-icons/md";
+import {BiCommentDetail} from "react-icons/bi";
+import {FaUserAlt} from "react-icons/fa";
+// import Card from 'react-bootstrap/Card';
 
 
 export default function TestimonialsApp() {
-    // function handleButton (e){
-    //     console.log("button clicked");
-    //     console.log(e.target);
-    // }
-    const [testimonials,setTestimonials] = useState("");
-    const [items,setItems] =useState([]);
-
-    useEffect(()=>{
-        fetch(`https://jsonplaceholder.typicode.com/${testimonials}`)
-      .then(response => response.json())
-      
-      .then(json => setItems(json))
-    },[testimonials])
-    return (
+  
+  const [testimonials,setTestimonials] = useState("");
+  const [items,setItems] = useState(); 
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/${testimonials}`)
+    .then(response => response.json())
+    .then(json => setItems(json))
+  
+  }, [testimonials])
+  
     
-    <div>
-        <Title text={"TestimonialsApp"} />
+    return (          
+      <div className="container m-auto">
+        <Title text="Refined Testimonial App"/>      
 
-        <Button onClick={()=>setTestimonials("posts")} text={"Posts"} btnClass="btn-info" icon={<MdPostAdd />}/> 
-
-        <Button onClick={()=>setTestimonials("users")} text={"Users"} btnClass="btn-info" icon={<FaRegUser />}/> 
-
-        <Button onClick={()=>setTestimonials("comments")} text={"Comments"} btnClass="btn-info" icon={<MdOutlineComment />}/> 
-
-        <Button text={"album"} btnClass={"btn-success"} onClick={()=>setTestimonials("albums")} icon={<MdOutlineComment />}/>
-
-        <Title classes={"subtitle text-primary"} text={!testimonials ? "select from above" : testimonials} />
-        {!items ? null : items.map((item)=>{
-                return (
-                  <div className="card card-primary mb-2" key={item.id}>
-                    <div className="card-body">
-                      <h4>{item.title}{item.username}</h4>
-                      <p>{item.body}</p>
-                    </div>
-                    
-
-                  </div> 
-                )            
-        })}
-    </div>
-  )
+        <Button text="Posts" btnClass={'btn-info'} icon={<MdPostAdd />} onClick={()=>setTestimonials("Posts")}/>
+        <Button text="Comment" btnClass={'btn-info'} icon={<BiCommentDetail/>} onClick={()=>setTestimonials("Comments")}/>
+        <Button text="Users" btnClass={'btn-info'} icon={<FaUserAlt />} onClick={()=>setTestimonials("Users")}/>
+        <p className={"subtitle  text-primary"}>{!testimonials ? "select from above" : testimonials}</p>
+        {!items ? null : 
+        items.map((item)=>{
+          return (
+              <div className="card card-primary mb-2" key={item.id}>
+                {item.name && <h2 className="card-header">{item.name}</h2>}
+                <div className="card-body">
+                    <h4>{item.title}</h4>
+                    <p>{item.body}</p>
+                </div>
+                </div>
+          )
+        })
+        }
+      </div>
+    )  
 }
+
+
